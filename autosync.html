@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoSync - A Square Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="transition-colors duration-500 bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="shadow-md sticky top-0 bg-white dark:bg-gray-800 z-50 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="text-3xl font-black text-blue-600 relative leading-none">
+          <span class="absolute left-0 top-0 translate-x-1 translate-y-1 text-gray-300">A</span>
+          <span class="relative">A</span>
+        </div>
+        <span class="font-semibold text-xl">Technologies</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <nav class="space-x-4 hidden md:block">
+          <a href="index.html" class="hover:text-blue-500">Home</a>
+          <a href="about.html" class="hover:text-blue-500">About</a>
+          <a href="autosync.html" class="hover:text-blue-500">AutoSync</a>
+          <a href="contact.html" class="hover:text-blue-500">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="text-xl focus:outline-none">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-6 py-12 animate-fade-in-up">
+    <h1 class="text-3xl font-bold mb-4">What is AutoSync?</h1>
+    <p class="text-lg leading-relaxed mb-6">
+      <strong>AutoSync</strong> is an upcoming platform developed by A Square Technologies to bridge the gap between vehicle owners and local mechanics. Our mission is to simplify car servicing by bringing trusted mechanics right to your doorstep — no more long waits or unclear pricing.
+    </p>
+    <p class="text-lg leading-relaxed mb-6">
+      AutoSync will also include a dedicated <strong>driver app</strong> for logistics support. Drivers will receive real-time updates with pick-up and drop-off locations, allowing for seamless vehicle transportation between customers and service centers.
+    </p>
+    <p class="text-lg leading-relaxed mb-6">
+      We’re currently in the development phase, actively working to build a reliable and intuitive experience for both users and service providers. Our future updates will also introduce ratings, live tracking, and secure digital payments to ensure complete transparency and trust.
+    </p>
+    <p class="text-lg leading-relaxed">
+      Whether you're a car owner looking for convenience or a local mechanic aiming to grow your business, AutoSync is designed to empower you. Stay tuned — something great is coming!
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800 dark:text-gray-300">
+    <p class="text-sm">&copy; 2025 A Square Technologies. All rights reserved.</p>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+</html>

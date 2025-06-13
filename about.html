@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - A Square Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="transition-colors duration-500 bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="shadow-md sticky top-0 bg-white dark:bg-gray-800 z-50 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="text-3xl font-black text-blue-600 relative leading-none">
+          <span class="absolute left-0 top-0 translate-x-1 translate-y-1 text-gray-300">A</span>
+          <span class="relative">A</span>
+        </div>
+        <span class="font-semibold text-xl">Technologies</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <nav class="space-x-4 hidden md:block">
+          <a href="index.html" class="hover:text-blue-500">Home</a>
+          <a href="about.html" class="hover:text-blue-500">About</a>
+          <a href="autosync.html" class="hover:text-blue-500">AutoSync</a>
+          <a href="contact.html" class="hover:text-blue-500">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="text-xl focus:outline-none">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12 animate-fade-in-up">
+    <h1 class="text-3xl font-bold mb-6">About A Square Technologies</h1>
+
+    <p class="text-lg leading-relaxed mb-6">
+      A Square Technologies was founded with a single belief — that meaningful technology starts by solving local problems in simple, impactful ways.
+      Our first step in that direction is <strong>AutoSync</strong>, a smart platform that connects vehicle owners with trusted local mechanics and drivers, making car care more accessible and reliable.
+    </p>
+
+    <p class="text-lg leading-relaxed mb-6">
+      Whether you're a car owner in need of transparent service, or a mechanic looking to reach more customers, AutoSync bridges that gap through intuitive design and real-time connection.
+      We aim to bring convenience to your doorstep — literally.
+    </p>
+
+    <p class="text-lg leading-relaxed mb-6">
+      While AutoSync is just the beginning, our long-term vision goes far beyond. We’re building a foundation — one that supports a range of solutions across the mobility and service tech landscape.
+      Every product we create will stay true to one principle: <em>empowering everyday people through technology that works for them</em>.
+    </p>
+
+    <p class="text-lg leading-relaxed">
+      We’re just getting started — and the journey ahead is full of ideas, innovation, and impact.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800 dark:text-gray-300">
+    <p class="text-sm">&copy; 2025 A Square Technologies. All rights reserved.</p>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script src="theme.js"></script>
+</body>
+</html>

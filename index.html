@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+
+  <title>A Square Technologies</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="transition-colors duration-500 bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+<!-- Header -->
+<header class="shadow-md sticky top-0 bg-white dark:bg-gray-800 z-50 transition-colors duration-500">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <div class="relative text-3xl font-black text-blue-600 leading-none h-8 w-6">
+        <span class="absolute left-0 top-0 translate-x-[1px] translate-y-[1px] text-gray-300">A</span>
+        <span class="relative">A</span>
+      </div>
+      <span class="font-semibold text-xl">Technologies</span>
+    </div>
+
+    <!-- Nav + Toggle -->
+    <div class="flex items-center space-x-4">
+      <nav class="space-x-4 hidden md:block">
+        <a href="index.html" class="hover:text-blue-500">Home</a>
+        <a href="about.html" class="hover:text-blue-500">About</a>
+        <a href="autosync.html" class="hover:text-blue-500">AutoSync</a>
+        <a href="contact.html" class="hover:text-blue-500">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="text-xl focus:outline-none">🌙</button>
+    </div>
+  </div>
+</header>
+
+<section class="relative h-[90vh] overflow-hidden flex items-center justify-center text-center text-white">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fbf0b?auto=format&fit=crop&w=1600&q=80"
+         alt="Team Working"
+         class="w-full h-full object-cover filter blur-sm brightness-75" />
+  </div>
+  <div class="relative z-10 animate-fade-in-up max-w-3xl px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Innovating Auto Services</h1>
+    <p class="text-lg md:text-xl mb-6">
+      A Square Technologies is redefining how vehicle owners connect with service providers through AutoSync.
+    </p>
+    <a href="autosync.html" class="mt-6 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition">
+      Discover AutoSync
+    </a>
+  </div>
+</section>
+<section class="max-w-5xl mx-auto px-6 py-16 text-center">
+  <h2 class="text-2xl md:text-3xl font-bold mb-6">Building the Future of AutoCare</h2>
+  <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-6">
+    AutoSync is currently under development and aims to revolutionize the way local mechanics, drivers, and car owners connect.
+    Whether it's finding a reliable nearby garage, scheduling a doorstep pickup, or requesting a driver, AutoSync will make everything seamless and smart.
+  </p>
+  <p class="text-md leading-relaxed text-gray-600 dark:text-gray-400">
+    We are committed to empowering small service providers and creating trust between customers and mechanics. Stay tuned for our launch and be part of the change.
+  </p>
+</section>
+<footer class="text-center py-6 bg-gray-100 dark:bg-gray-800 dark:text-gray-300">
+  <p class="text-sm">&copy; 2025 A Square Technologies. All rights reserved.</p>
+</footer>
+
+<script src="theme.js"></script>
+</body>
+</html>
